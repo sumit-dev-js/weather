@@ -28,14 +28,15 @@ app.get('', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-   res.render('index', {
+   res.render('about', {
       title: 'About App',
-      name: 'Sumit Kumar'
+      name: 'Sumit Kumar',
+      publicpath: publicpath
    });
 });
 
 app.get('/help', (req, res) => {
-   res.render('index', {
+   res.render('help', {
       title: 'Help',
       name: 'Sumit Kumar'
    });
