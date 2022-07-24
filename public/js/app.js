@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit',(e) =>{
     msg1.textContent = 'loading...';
     //fetch api , its a browser based api not a js api also not supported by the  node as its  a client side.
     const address = document.querySelector('input').value;
-fetch('http://localhost:3000/weather?address='+ address).then((response) => {
+fetch('/weather?address='+ address).then((response) => {
     response.json().then((data) => {
         if(data.error){
             msg1.textContent = data.error;
